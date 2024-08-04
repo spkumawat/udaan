@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
   return (
     <div  className='headercolor'>
-      
+          {/* <div className='contactus'>  CONTACT US </div> */}
     </div>
   )
 }

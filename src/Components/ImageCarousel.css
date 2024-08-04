@@ -1,0 +1,108 @@
+/* ImageCarousel.css */
+.carousel {
+    width: 90%; 
+    /* Adjust the width as needed */
+    max-width: 1500px; /* Max width to ensure it doesn’t get too large */
+    margin: 0 auto; /* Center align */
+    position: relative; /* Required for absolute positioning of buttons */
+    overflow: visible; /* Hide overflow to avoid extra scrollbars */
+    padding: 40px; /* Add padding to accommodate enlarged images */
+  }
+  
+  .carousel-main {
+    padding: 20px 0; /* Adjust top and bottom padding as needed */
+  }
+  .carousel-main .slick-list {
+    display: flex; /* Ensure the slick-list is a flex container */
+}
+
+.carousel-main .slick-track {
+    display: flex; /* Ensure the slick-track is a flex container */
+}
+  
+  .carousel-main .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the image vertically */
+    margin: 0 20px; /* Gap between images */
+  }
+  
+  .carousel-main .slick-slide img {
+    width: 100%; /* Make the image fit the slide width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+    border: 5px solid transparent; /* Transparent border to avoid layout shifts */
+    border-radius: 50%; /* Rounded corners for the border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow for better visibility */
+    transition: all 0.5s ease;
+     /* Smooth transition for hover effect */
+  }
+  img{
+      margin-top : 20px ;
+  }
+  
+  .carousel-main .slick-slide img:hover {
+    border: 5px solid #9af4b8; /* Border color change on hover */
+    transform: scale(1.1); /* Enlarge the image on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+  }
+  
+  .carousel-main .slick-prev,
+  .carousel-main .slick-next {
+    font-size: 0px;
+    color: #22ff56; /* Change text color of the buttons */
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background for better contrast */
+    border: 2px solid #3bdc4e; /* Border color matching the text color */
+    border-radius: 50%; /* Circular buttons */
+    width: 50px; /* Width of the button */
+    height: 50px; /* Height of the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2; /* Ensure buttons are on top of images */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* More prominent shadow */
+    /* Absolute positioning within the carousel */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .carousel-main .slick-prev {
+    left: -100px;
+     /* Position the button outside the left edge */
+}
+
+.carousel-main .slick-next {
+    right: -100px;
+    /* Position the button outside the right edge */
+}
+  .carousel-main .slick-prev:hover,
+  .carousel-main .slick-next:hover {
+    background-color: #ff5722; /* Background color change on hover */
+    border-color: #ff5722; /* Border color change on hover */
+    color: #fff; /* Change text color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.5);  /* Enhanced shadow on hover */
+  }
+  
+  .carousel-main .slick-dots {
+    bottom: -40px; /* Adjust position as needed */
+  }
+  
+  .carousel-main .slick-dots li button:before {
+    font-size: 14px; /* Adjust size of dots */
+    color: #333; /* Adjust color as needed */
+  }
+  
+  .carousel-main .slick-dots li.slick-active button:before {
+    color: #ff5722; /* Adjust color for active dot */
+  }
+  
+  .name {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px; /* Adjust font size as needed */
+    color: #333; /* Adjust text color as needed */
+  }
+  

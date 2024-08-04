@@ -1,10 +1,25 @@
 .headercolor{
       
-    background-color: antiquewhite;
-    Height : 10px;
-    position: fixed; /* Fix the navbar at the top */
+    background-color: white;
+    Height : 40px;
+    position: relative; /* Fix the navbar at the top */
     top: 0; /* Position at the top */
     left: 0; /* Align with the left edge */
     right: 0;
-    z-index: 1000;
+    z-index: 100;
+    border: 2px #758ea3 black;
+}
+.contactus{
+      
+      height : 30px ;
+      width : 150px ;
+    position : absolute ;
+    right : 10px ;
+    
+      margin-top: 15px ;
+      margin-bottom: 5px ;
+      color : white ;
+      background-color: rgb(92, 55, 5);
+      /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+      font-family: "Source Sans Pro", "Arial", sans-serif;
 }

@@ -4,6 +4,12 @@ import { BrowserRouter, Routes, Route , Router} from "react-router-dom";
 import NavBar from './Components/Navbar'
 import Header from './Components/Header';
 import Home from './pages/Home'
+import AboutUs from './pages/AboutUs.js' ;
+import Counts from './pages/Counts';
+import Events from './pages/Events';
+import Team from './pages/Team';
+import Gallary from './pages/Gallary' ;
+
 
 function App() {
   return (
@@ -14,6 +20,11 @@ function App() {
         <NavBar />
         <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/aboutus" element = {<AboutUs />} /> 
+        <Route path ="/counts" element = {<Counts /> }  /> 
+        <Route path = "/events" element ={<Events />} /> 
+        <Route path = "/team" element = { <Team /> }  /> 
+        <Route path = "/gallary" element = {<Gallary /> } /> 
         </Routes>
      </BrowserRouter>
        
