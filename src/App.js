@@ -9,6 +9,7 @@ import Counts from './pages/Counts';
 import Events from './pages/Events';
 import Team from './pages/Team';
 import Gallary from './pages/Gallary' ;
+import Footer from './Components/Footer.js'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
      <>
      <BrowserRouter>
 
-        <Header />
+        {/* <Header /> */}
         <NavBar />
         <Routes>
         <Route path="/" element={<Home />} />
@@ -26,6 +27,7 @@ function App() {
         <Route path = "/team" element = { <Team /> }  /> 
         <Route path = "/gallary" element = {<Gallary /> } /> 
         </Routes>
+        <Footer/> 
      </BrowserRouter>
        
     </>

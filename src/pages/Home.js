@@ -1,18 +1,51 @@
 import React from 'react'
-import { useState ,useEffect } from 'react';
+import { useState ,useEffect,useRef } from 'react';
 import './Home.css'
 import CarouselComponent from '../Components/ImageCarousel';
 import {Link } from 'react-router-dom';
 
 
 
+
 const Home = () => {
 
   const [countevent, setCountevent] = useState(0);
+  const [countvol, setCountvol] = useState(0);
+  const [countchil, setCountchil] = useState(0);
+
+  const [startCounting, setStartCounting] = useState(false);
+  const sectionRef = useRef(null) ;
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setStartCounting(true);
+        }
+      },
+      {
+        threshold: 0.5, // Adjust this value as needed
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+
 
   useEffect(() => {
     let timer;
-    if (countevent < 60) {
+    if (startCounting && countevent < 60) {
       timer = setInterval(() => {
         setCountevent((prevCount) => prevCount + 1);
       }, 10); // Adjust the interval duration as needed for speed
@@ -21,13 +54,13 @@ const Home = () => {
     }
 
     return () => clearInterval(timer); // Clear the interval on component unmount
-  }, [countevent]);
+  }, [ startCounting ,countevent]);
 
-  const [countvol, setCountvol] = useState(0);
+  
 
   useEffect(() => {
     let timer;
-    if (countvol < 1200) {
+    if ( startCounting && countvol < 1200) {
       timer = setInterval(() => {
         setCountvol((prevCount) => prevCount + 1);
       }, 0.1); // Adjust the interval duration as needed for speed
@@ -36,15 +69,15 @@ const Home = () => {
     }
 
     return () => clearInterval(timer); // Clear the interval on component unmount
-  }, [countvol]);
+  }, [startCounting, countvol]);
 
 
 
-  const [countchil, setCountchil] = useState(0);
+
 
   useEffect(() => {
     let timer;
-    if (countchil< 100) {
+    if (startCounting && countchil< 100) {
       timer = setInterval(() => {
         setCountchil((prevCount) => prevCount + 1);
       }, 10); // Adjust the interval duration as needed for speed
@@ -53,7 +86,7 @@ const Home = () => {
     }
 
     return () => clearInterval(timer); // Clear the interval on component unmount
-  }, [countchil]);
+  }, [startCounting, countchil]);
 
 
 
@@ -81,7 +114,7 @@ const Home = () => {
          
           <div  className='aboutus-content'>
           <img className="aboutusimage" src="https://lh6.googleusercontent.com/UNmPswmWMeWQaOjVhfmFijpvJqbjF7TSqGlzgBK01ZkBEljmcblKH47lc8gy-ReHSkM=w2400"/>
-          <h1> ABOUT US</h1>
+          <h1  > ABOUT US</h1>
           <p>With an intent to work towards societal betterment and to help the students maintain their socially traditional roots, Social Wing RAIT was founded in the year 2013. We are dedicated to providing a grass-roots outlook of societal issues to our student members and finding and working on solutions to these issues. Ever since its inception, Social Wing has become a significant part of RAIT and has observed increasing participation of students with each passing year.</p>
         
           </div>
@@ -89,20 +122,20 @@ const Home = () => {
     <div class="count">
           <div>
 
-          <div  className='count-content'>
+          <div  className='count-content' >
                <div className='count-item'> 
                <i class="bi bi-check-all"></i>
-               <span className='number'> {countevent } +  </span>
+               <span className={`number countevent`} ref={sectionRef}> {countevent } +  </span>
                <span className='number'> Events done</span>
                </div>
                <div className='count-item'> 
                <i class="bi bi-person-fill"></i>
-               <span className='number'>{countvol } +  </span>
+               <span className={`number countvol`} ref={sectionRef}>{countvol } +  </span>
                <span className='number'> Happy Volunteers</span>
                </div>
                <div className='count-item'> 
                <i class="bi bi-heart-pulse-fill"></i>
-               <span className='number'> { countchil} + </span>
+               <span className={`number countchil`} ref={sectionRef}> { countchil} + </span>
                <span className='number'> Children Educated</span>
                </div>
         
@@ -140,14 +173,8 @@ const Home = () => {
           </div>
           </div>
     </div>
-    <div class="Footer">
-          <div>
-          <div  className='Footer-content'>
-            <div className='footerline'> </div>
-           <p> © 2024 Rotary International. All rights reserved. Privacy Policy Terms of Use</p>
-          </div>
-          </div>
-    </div>
+   
+  
     
 
     </>

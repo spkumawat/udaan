@@ -1,0 +1,37 @@
+
+.Footer{
+    text-align: center;
+    color : black;
+    background-color: white;
+    height :300px ;
+    position: relative;
+}
+.Footer-content{
+      
+    position : absolute;
+    bottom: 20px ;
+   align-items: center;
+   
+    width : 95%;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.Footer-content-links{
+     display: flex;
+     flex-direction: row ;
+     gap: 20px ;
+     align-items:  center;
+     justify-content: center;
+     margin-bottom: 30px ;;
+     
+   
+
+}
+.footer-link{
+  text-decoration: none;
+}
+.footerline{
+       border : 0.5px solid #3d3c3c;
+       margin-left  : 100px ;
+}

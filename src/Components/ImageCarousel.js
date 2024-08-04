@@ -61,6 +61,8 @@ const CarouselComponent = () => {
     slidesToShow: 3, // Show exactly 3 images
     slidesToScroll: 1,
     infinite: true,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000,
     speed: 500,
     responsive: [
       {

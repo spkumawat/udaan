@@ -10,10 +10,12 @@
   font-family: 'Roboto', sans-serif;
   font-size: x-large;
   padding-right: 150px;
-  position: sticky; /* Fix the navbar at the top */
-  top: 0px; /* Position at the top */
+  position: fixed; /* Fix the navbar at the top */
+  top: 20px; /* Position at the top */
   left: 0; /* Align with the left edge */
   right: 0;
+  margin-left : 20px; 
+  margin-right: 20px ;
   font-weight: 700;
   z-index: 1000;
   border-top: 1px solid #808080;
