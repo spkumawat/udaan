@@ -10,9 +10,9 @@
   font-family: 'Roboto', sans-serif;
   font-size: x-large;
   padding-right: 150px;
-  position: fixed; /* Fix the navbar at the top */
-  top: 20px; /* Position at the top */
-  left: 0; /* Align with the left edge */
+  position: fixed; 
+  top: 20px; 
+  left: 0;
   right: 0;
   margin-left : 20px; 
   margin-right: 20px ;
@@ -47,20 +47,58 @@
   color: white;
 }
 
-.donate {
-  height: 40px;
-  width: 130px;
-  background-color: red;
-  margin: 5px;
-  font-size: x-large;
-  padding-right: 7px;
-  padding-left: 7px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
 
 .imageoflogo {
   height: 80px;
   width: 80px;
   margin-left: 30px;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 20px;
+   
+  }
+
+  .navbar-menu {
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
+  /* Hide menu items by default */
+    width: 100%;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+    background-color: hsl(334, 37%, 93%); /* Show menu items when the menu is open */
+  }
+
+  .navbar-item {
+    padding: 10px;
+    font-size: large;
+    width: 100%;
+    text-align: left;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed ;
+    top : 50px;
+    right : 30px;
+    background-color: yellow;
+  
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
 }

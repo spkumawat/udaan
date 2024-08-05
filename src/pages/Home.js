@@ -143,17 +143,19 @@ const Home = () => {
           </div>
     </div>
     <div class="event">
-          <div>
-          <div  className='event-content'>
-            <h1>OUR EVENTS</h1>
-         
-           <CarouselComponent/> 
+          
+              <div  className='event-content'>
+                    <h1>OUR EVENTS</h1>
+                   <div>
+                   <CarouselComponent/> 
+                   </div>
+                
 
-           <div className='gallaryinhome'> 
-           <Link to="/gallary" className='gallarylink' > View All <span style={{marginRigh:'20px'}}>Stories  </span> <i class="bi bi-arrow-right-circle"></i></Link>
-          </div>
-          </div>
-          </div>
+                  <div className='gallaryinhome'> 
+                  <Link to="/gallary" className='gallarylink' > View All <span style={{marginRigh:'20px'}}>Stories  </span> <i class="bi bi-arrow-right-circle"></i></Link>
+                  </div>
+              </div>
+          
     </div>
     <div class="team">
           <div>

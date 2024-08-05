@@ -3,7 +3,7 @@
      width : 90% ;
     /* Adjust the width as needed */
     max-width: 1024px; /* Max width to ensure it doesn’t get too large */
-    margin: 0 auto; /* Center align */
+     /* Center align */
     position: relative; /* Required for absolute positioning of buttons */
     overflow: visible; /* Hide overflow to avoid extra scrollbars */
     padding: 40px; /* Add padding to accommodate enlarged images */
