@@ -2,7 +2,7 @@
 .carousel {
      width : 100% ;
     /* Adjust the width as needed */
-    max-width: 1200px; /* Max width to ensure it doesn’t get too large */
+    max-width: 1024px; /* Max width to ensure it doesn’t get too large */
     margin: 0 auto; /* Center align */
     position: relative; /* Required for absolute positioning of buttons */
     overflow: visible; /* Hide overflow to avoid extra scrollbars */
