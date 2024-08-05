@@ -1,6 +1,6 @@
 /* ImageCarousel.css */
 .carousel {
-     width : 100% ;
+     width : 90% ;
     /* Adjust the width as needed */
     max-width: 1024px; /* Max width to ensure it doesn’t get too large */
     margin: 0 auto; /* Center align */
